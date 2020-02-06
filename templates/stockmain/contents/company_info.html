@@ -1,0 +1,62 @@
+{% load static %}
+{% load humanize %}
+<div class="center container clearfix">
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+</div>
+
+<div class="center container clearfix">
+
+    <div class="table-responsive">
+      <table class="table table-bordered nobottommargin">
+        <thead>
+          <tr>
+            <th><b>      #      </b></th>
+              {% for datas in data %}
+                  <th>{{ datas.year_model }}.{{ datas.quarter_model }}</th>
+              {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td><b>매출액</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.sales|intcomma }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+          <td><b>영업이익</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.operating_revenue|intcomma }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+          <td><b>순이익</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.net_income|intcomma }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+          <td><b>자산</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.asset|intcomma }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+          <td><b>자본</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.capital|intcomma }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+          <td><b>부채</b></td>
+            {% for datas in data %}
+                  <td>{{ datas.liabilities|intcomma }}</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div>

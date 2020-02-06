@@ -1,0 +1,35 @@
+{% load static %}
+{#<head>#}
+{#    <title>#}
+{#        Inspections#}
+{#    </title>#}
+{#    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">#}
+{#    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'stockmain/inspection/viewer.css' %}" charset="utf-8">#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/prototype.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/jquery-all.js' %}"></script>#}
+{##}
+{#    <!--[if (gte IE 9)|!(IE)]><!-->#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'stockmain/inspection/ext-all.css' %}"><!--<![endif]-->#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/ext-base.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/ext-all.js' %}"></script>#}
+{##}
+{#    <!-- application css -->#}
+{#    <link rel="stylesheet" href="{% static 'stockmain/inspection/report_c.css' %}" type="text/css" media="screen">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'stockmain/inspection/report_dart.css' %}" charset="utf-8">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'stockmain/inspection/report_pop.css' %}" charset="utf-8">#}
+{##}
+{#    <!-- x-xeries js libraries  -->#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/xjs.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/ds-all-min.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/popup.js' %}"></script>#}
+{##}
+{#    <script type="text/javascript" src="{% static 'stockmain/inspection/idart.js' %}"></script>#}
+{#</head>#}
+    <link rel="stylesheet" type="text/css" href="{% static 'stockmain/inspection/custom.css' %}"><!--<![endif]-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{% autoescape off %}
+    {{ report }}
+{% endautoescape %}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+#docBody {
+  margin-left: 20px;
+  font: 12pt "바탕", Batang;
+  width: 600px;
+  word-break: break-all;
+}
+
+#docBody table {
+  font: 11pt "굴림", Gulim;
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: black;
+  color: #000000;
+  margin-bottom: 6px;
+  table-layout: auto;
+}
+
+#docBody TABLE.nb {
+	  border-style: none;
+}
+
+#docBody TH {
+  font: 11pt/ 1.5em "굴림", Gulim;
+  background-color: #dcdcdc;
+  border-color: gray;
+  padding: 2px 4px 0px 4px;
+}
+
+#docBody TD {
+  font: 11pt/ 1.5em  "굴림", Gulim;
+  border-color: gray;
+  padding: 2px 4px 0px 4px;
+  white-space: nowrap;
+}
+
+#docBody P {
+  font: 12pt/ 1.5em "바탕", Batang;
+  text-align: justify;
+  color: #000000;
+  margin: 0px;
+}
+
+#docBody P.table-group {
+  font: 11pt "굴림", Gulim;
+  text-align: center;
+}
+
+#docBody P.img-caption {
+  font: 12pt "굴림", Gulim;
+  text-align: center;
+  color: #324a58;
+}
+
+#docBody P.part {
+  font: 20pt/ 1.5em "바탕", Batang;
+  text-align: center;
+  color: #0000ff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#docBody P.section-1 {
+  font: 18pt/ 1.5em "바탕", Batang;
+  text-align: center;
+  color: #0000ff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#docBody P.section-2 {
+  font: 16pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #0000ff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#docBody P.section-3 {
+  font: 14pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #0000ff;
+}
+
+#docBody P.section-4 {
+  font: 14pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #0000ff;
+}
+
+#docBody P.section-5 {
+  font: 12pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #0000ff;
+}
+
+#docBody P.section-6 {
+  font: 12pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #0000ff;
+}
+
+#docBody P.cover-title {
+  font: 28pt/ 1.5em "바탕", Batang;
+  text-align: center;
+  color: #0000ff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#docBody P.correction {
+  font: 28pt/ 1.5em "바탕", Batang;
+  text-align: center;
+  color: #0000ff;
+}
+
+#docBody P.description {
+  font: 12pt/ 1.5em "바탕", Batang;
+  text-align: left;
+  color: #324a58;
+}
+
+#docBody P.pgbrk {
+  height: 48px;
+}

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+{% include "stockmain/modules/head.html" %}
+
+{#  chart Javascript import  #}
+<script src="{% static 'stockmain/js/chart.js' %}"></script>
+<script src="{% static 'stockmain/js/chart-utils.js' %}"></script>
+
+</head>
+
+<body class="stretched side-panel-left">
+
+	<div class="body-overlay"></div>
+
+	{% include "stockmain/modules/side_panel.html" %}
+
+	</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header" data-sticky-class="not-dark">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					{% include "stockmain/modules/logo.html" %}
+
+					<!-- Primary Navigation
+					============================================= -->
+					{% include "stockmain/modules/primary_menu.html" %}
+
+				</div>
+
+			</div>
+
+		</header><!-- #header end -->
+
+		<!-- Page Title
+		============================================= -->
+        {% include "stockmain/contents/company_info_page_title.html" %}
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				{% include "stockmain/contents/company_info.html" %}
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				{% include "stockmain/modules/footer_widgets.html" %}
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			{% include "stockmain/modules/copyrights.html" %}
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	{% include "stockmain/modules/external_js.html" %}
+
+	<!-- Footer Scripts
+	============================================= -->
+	{% include "stockmain/modules/footer_scripts.html" %}
+
+	{% include "stockmain/modules/chart.html" %}
+
+</body>
+</html>

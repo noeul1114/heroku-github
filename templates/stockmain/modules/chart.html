@@ -1,0 +1,85 @@
+
+
+    <script>
+        var endpoint = 'chart/{{ target_company.code }}';
+        $.ajax({
+            method: "GET",
+            url: endpoint,
+            success: function(data){
+                console.log(Object.keys(data.company_info[0]));
+                console.log(data.company_info);
+                console.log(data.company_info[0].asset);
+
+                var sales_array = [];
+                var operrev_array = [];
+                var netincome_array = [];
+                var year_array = [];
+
+                var company_length = data.company_info.length;
+                var company_key_length = Object.keys(data.company_info[0]).length;
+                
+                {#for (i = 0; i <company_length; i++){#}
+                {#    for (j = 0; j < company_key_length; j++){#}
+                {#        sales_array.push(data.company_info[i]);#}
+                {#    }#}
+                {# } #}
+
+                for (i = 0; i <company_length; i++){
+                        {#sales_array.push(data.company_info[i].sales#}
+                        {#    - data.company_info[i-1].sales#}
+                        {#    - data.company_info[i-2].sales#}
+                        {#    - data.company_info[i-3].sales);#}
+                        {#operrev_array.push(data.company_info[i].operating_revenue#}
+                        {#    - data.company_info[i-1].operating_revenue#}
+                        {#    - data.company_info[i-2].operating_revenue#}
+                        {#    - data.company_info[i-3].operating_revenue);#}
+                        {#netincome_array.push(data.company_info[i].net_income#}
+                        {#    - data.company_info[i-1].net_income#}
+                        {#    - data.company_info[i-2].net_income#}
+                        {#    - data.company_info[i-3].net_income);#}
+                        sales_array.push(data.company_info[i].sales);
+                        operrev_array.push(data.company_info[i].operating_revenue);
+                        netincome_array.push(data.company_info[i].net_income);
+                        year_array.push(data.company_info[i].year_model + ". " + data.company_info[i].quarter_model +".");
+                    }
+
+                console.log(sales_array);
+                console.log(operrev_array);
+                console.log(netincome_array);
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: year_array,
+                        {#datasets: [{#}
+                        {#    label: '# of Votes',#}
+                        {#    data: Object.values(data.company_info[0]),#}
+                        {#    borderWidth: 1#}
+                        {# ] #}
+                        datasets: [
+                          {borderColor: "rgba(220,0,0,0.6)",
+                           backgroundColor: "rgba(220,0,0,0.1)",
+                           data: sales_array,
+                              label: 'sales'
+                          },
+                          {borderColor: "rgba(0,187,0,0.6)",
+                           backgroundColor: "rgba(0,187,0,0.1)",
+                           data: operrev_array,
+                              label: 'operating revenue'
+                          },
+                          {borderColor: "rgba(0,0,220,0.6)",
+                           backgroundColor: "rgba(0,0,220,0.1)",
+                           data: netincome_array,
+                              label: 'net income'
+                          }
+                      ]
+                    },
+                });
+            },
+            error: function(error_data){
+                console.log(error_data)
+            }
+        });
+
+    </script>

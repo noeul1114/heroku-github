@@ -1,0 +1,174 @@
+
+
+/*   pop BOX  */
+
+.popBox {
+     width : 100%;
+	 background-color : #E9E7E7;
+	 padding-bottom : 8px;
+}
+
+.popLineBox {
+     width : 514px;
+     border : 3px solid #77AFDD;
+	 padding-bottom : 8px;
+}
+
+.popClose{
+     margin : 0px;
+	 padding-top : 8px;
+	 text-align : center;
+
+
+}
+.popContents {
+     width : 480px;
+     border : 1px solid #CAC8C8;
+	 background-color : #ffffff;
+	 margin-left : 7px;
+	 padding : 8px 8px;
+}
+
+.popView {
+     width : 470px;
+     border-top : 1px solid #CAC8C8;
+	 background-color : #ffffff;
+	 padding : 8px 15px;
+	 margin-left : 7px;
+}
+.popSearch {
+     width : 458px;
+	 border : 1px solid #56BCE0;
+	 background-color : #DFEFFA;
+	 padding : 10px 10px 5px 10px;
+	 overflow: auto;
+
+}
+.popSearch table {
+    border-collapse : collapse;
+	margin-bottom : 5px;
+}
+.popSearch th {
+     color : #036D91;
+	 text-align : left;
+	 padding : 0px 5px 0px 10px;
+	 text-align : right;
+}
+.popSearch ul {
+     padding : 5px 0px 0px 0px;
+}
+.popSearch li {
+     padding : 0px 0px 0px 3px;
+}
+.popSearch li.sch {
+     padding : 0px 0px 0px 8px;
+}
+.popContents p {
+     margin : 7px 0px  ;
+	 padding : 0px 0px 0px 0px ;
+}
+table.popList {
+   border-collapse : collapse;
+   border-top : 3px solid #089FD2;
+   border-bottom : 2px solid #AEAEAE;
+   margin-top : 7px;
+
+}
+
+.popList th{
+   background-image: url(../images/pop/pop_list_bg.gif);
+   background-position : top;
+   background-repeat:repeat-x;
+   border-bottom : 1px solid #CFCFCF;
+   padding : 7px 0px;
+   color : #296680;
+
+
+}
+
+.popList td{
+   border-bottom : 1px dotted #CFCFCF;
+   padding : 3px 0px;
+
+
+}
+.popPage{
+    float : left;
+    padding : 10px 0px 2px 0px ;
+	text-align : center;
+	width : 70%;
+
+
+}
+
+.popCount{
+    float : right;
+    padding : 10px 0px 2px 0px ;
+	text-align : center;
+	width : 30%;
+
+}
+.lineR{
+    border-right : 1px solid #CFCFCF;
+}
+
+.popView table.info th {
+     background-color : #EBEBEB;
+	 padding : 7px 3px;
+}
+
+.popView table.info td {
+	 padding : 7px 3px;
+}
+
+.popView table.subject{
+    margin-top : 10px;
+}
+.popView table.subject th {
+     border-top : 2px solid #B2D9E7;
+	 border-bottom : 1px solid #B2D9E7;
+     background-color : #F0F7FA;
+	 padding : 7px 8px;
+	 color : #2B6E86;
+	 font-size : 11pt;
+	 text-align : left;
+
+}
+.popView table.subject td {
+	 padding : 8px 8px;
+	 border-bottom : 2px solid #CECDCA;
+	 overflow : auto;
+
+}
+
+.popView table.compInfo {
+    border-collapse : collapse;
+	margin-top : 9px;
+
+}
+.popView table.compInfo th {
+     width : 95px;
+     background-color : #F0F7FA;
+	 padding : 5px 3px;
+	 text-align : left;
+	 font-weight : normal;
+	 color : #2B6E86;
+	 border-bottom : 1px solid #B2D9E7;
+}
+
+.popView table.compInfo td {
+	 padding : 5px 3px;
+	 border-bottom : 1px solid #B2D9E7;
+}
+
+.delText{
+     background-color : #F0F7FA;
+}
+
+.popScheduel{
+      width : 560px;
+     border : 1px solid #CAC8C8;
+	 background-color : #ffffff;
+	 margin-left : 7px;
+	 padding : 8px 8px;
+}

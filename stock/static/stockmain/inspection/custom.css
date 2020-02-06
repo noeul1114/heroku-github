@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#sales, #operating_revenue, #net_income, #asset, #capital, #liabilities {
+  font-weight: bold;
+    color: blue;
+    background-color: #FCA300;
+}
+
+#won {
+  font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+table {
+    align-content: center;
+      margin: auto;
+}
