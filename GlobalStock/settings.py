@@ -80,47 +80,7 @@ WSGI_APPLICATION = 'GlobalStock.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'stock',
-#         'USER': 'root',
-#         'PASSWORD': 'ejgkfk114!',
-#         'HOST': 'localhost',
-#         'PORT': '3309',
-#     }
-# }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'willypower',
-#         'USER': 'willypower',
-#         'PASSWORD': 'qudtlstz1',
-#         'HOST': 'willypower.cafe24.com',
-#         'PORT': '3306',
-#
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'willypower',
-#         'USER': 'willypower',
-#         'PASSWORD': 'dbdkqqks645!',
-#         'HOST': 'my5701.gabiadb.com',
-#         'PORT': '3306',
-#
-#     }
-# }
 
 DATABASES = {
     'gabia_remote': {
