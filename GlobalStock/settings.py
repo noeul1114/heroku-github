@@ -123,7 +123,7 @@ WSGI_APPLICATION = 'GlobalStock.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
+    'gabia_remote': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ['MYSQL_DATABASE_NAME'],
         'USER': os.environ['MYSQL_USER'],
