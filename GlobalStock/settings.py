@@ -110,29 +110,29 @@ WSGI_APPLICATION = 'GlobalStock.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'willypower',
-        'USER': 'willypower',
-        'PASSWORD': 'dbdkqqks645!',
-        'HOST': 'my5701.gabiadb.com',
-        'PORT': '3306',
-
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.environ['MYSQL_DATABASE_NAME'],
-#         'USER': os.environ['MYSQL_USER'],
-#         'PASSWORD': os.environ['MYSQL_PASSWORD'],
-#         'HOST': os.environ['MYSQL_HOST'],
-#         'PORT': os.environ['MYSQL_PORT'],
+#         'NAME': 'willypower',
+#         'USER': 'willypower',
+#         'PASSWORD': 'dbdkqqks645!',
+#         'HOST': 'my5701.gabiadb.com',
+#         'PORT': '3306',
 #
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ['MYSQL_DATABASE_NAME'],
+        'USER': os.environ['MYSQL_USER'],
+        'PASSWORD': os.environ['MYSQL_PASSWORD'],
+        'HOST': os.environ['MYSQL_HOST'],
+        'PORT': os.environ['MYSQL_PORT'],
+
+    }
+}
 
 
 
