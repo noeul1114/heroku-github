@@ -1,2 +1,2 @@
 web: gunicorn GlobalStock.wsgi --log-file -
-migrate: python manage.py migrate
+release: python manage.py migrate
