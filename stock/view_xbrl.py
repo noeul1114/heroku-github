@@ -35,6 +35,8 @@ from selenium.webdriver.chrome.options import Options
 
 from collections import deque
 
+from GlobalStock.settings import BASE_DIR
+
 import csv
 import pandas
 from tqdm import tqdm
@@ -49,17 +51,18 @@ def index_view_page_xbrl(request):
     # chrome_options = Options()
     # chrome_options.add_argument("--headless")
     #
-    # driver = webdriver.Chrome("chromedriver.exe", chrome_options=chrome_options)
+    # driver_path = os.path.join(BASE_DIR, "chromedriver.exe")
+    # driver = webdriver.Chrome(driver_path, chrome_options=chrome_options)
     #
     # driver.get(base_url)
     #
-    # # print(driver.page_source)
+    # print(driver.page_source)
     #
     # soup = bs(driver.page_source, 'html.parser')
     #
     # soup = soup.find('table', class_="list")
     #
-    # # print(soup)
+    # print(soup)
     #
     # total_list = soup.find_all("tr")
     #
@@ -102,7 +105,8 @@ def index_view_page_xbrl(request):
     #
     #         # send a HTTP request to the server and save
     #         # the HTTP response in a response object called r
-    #         with open("Download/temp.zip", 'wb') as f:
+    #         temp_path = os.path.join(BASE_DIR, 'Download', 'temp.zip')
+    #         with open(temp_path, 'wb') as f:
     #             # Saving received content as a png file in
     #             # binary format
     #
@@ -110,7 +114,7 @@ def index_view_page_xbrl(request):
     #             # to a new file in binary mode.
     #             f.write(r.content)
     #
-    #         with zipfile.ZipFile("Download/temp.zip", 'r') as zip_ref:
+    #         with zipfile.ZipFile(temp_path, 'r') as zip_ref:
     #             # Get a list of all archived file names from the zip
     #             listOfFileNames = zip_ref.namelist()
     #             # Iterate over the file names
@@ -142,11 +146,11 @@ def index_view_page_xbrl(request):
 
     all_report_list = []
 
-    current_location = os.getcwd()
+    current_location = os.path.join(BASE_DIR, "Download")
 
     # r=>root, d=>directories, f=>files
     # Download 내의 모든 txt 파일들 이름 추출해내는 작업
-    for r, d, f in os.walk(current_location + "\\Download"):
+    for r, d, f in os.walk(current_location):
         for item in f:
             if '.txt' in item:
                 all_report_list.append(os.path.join(r, item))
@@ -170,7 +174,8 @@ def index_view_page_xbrl(request):
 
     for txt in tqdm(gaap[::-1]):
         # read CSV file & load into list
-        with open(current_location+"\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -415,7 +420,8 @@ def index_view_page_xbrl(request):
 
     for txt in tqdm(ifrs[::-1]):
         # read CSV file & load into list
-        with open(current_location+"\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -664,11 +670,11 @@ def index_view_page_xbrl(request):
 def common_word_inspect(request):
     all_report_list = []
 
-    current_location = os.getcwd()
+    current_location = os.path.join(BASE_DIR, "Download")
 
     # r=>root, d=>directories, f=>files
     # Download 내의 모든 txt 파일들 이름 추출해내는 작업
-    for r, d, f in os.walk(current_location + "\\Download"):
+    for r, d, f in os.walk(current_location):
         for item in f:
             if '.txt' in item:
                 all_report_list.append(os.path.join(r, item))
@@ -700,7 +706,8 @@ def common_word_inspect(request):
 
     for txt in tqdm(gaap[::-1]):
         # read CSV file & load into list
-        with open(current_location + "\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -782,7 +789,8 @@ def common_word_inspect(request):
 
     for txt in tqdm(gaap[::-1]):
         # read CSV file & load into list
-        with open(current_location + "\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -829,7 +837,8 @@ def common_word_inspect(request):
 
     for txt in tqdm(ifrs[::-1]):
         # read CSV file & load into list
-        with open(current_location + "\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -920,7 +929,8 @@ def common_word_inspect(request):
 
     for txt in tqdm(ifrs[::-1]):
         # read CSV file & load into list
-        with open(current_location + "\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
@@ -970,11 +980,11 @@ def common_word_inspect(request):
 def common_word_inspect_reverse(request):
     all_report_list = []
 
-    current_location = os.getcwd()
+    current_location = os.path.join(BASE_DIR, "Download")
 
     # r=>root, d=>directories, f=>files
     # Download 내의 모든 txt 파일들 이름 추출해내는 작업
-    for r, d, f in os.walk(current_location + "\\Download"):
+    for r, d, f in os.walk(current_location):
         for item in f:
             if '.txt' in item:
                 all_report_list.append(os.path.join(r, item))
@@ -1006,7 +1016,8 @@ def common_word_inspect_reverse(request):
 
     for txt in tqdm(gaap[::-1]):
         # read CSV file & load into list
-        with open(current_location + "\\Download\\" + "_".join(txt), 'r') as my_file:
+        file_path = os.path.join(current_location, "_".join(txt))
+        with open(file_path, 'r') as my_file:
             reader = pandas.read_csv(my_file, delimiter='\t')
             # print(reader)
             # repr(reader)
